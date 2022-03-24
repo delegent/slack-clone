@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  --slack-color: #040714;
+  overflow: hidden;
+}
