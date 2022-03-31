@@ -15,7 +15,6 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from "@mui/icons-material/Add";
 import { useCollection } from "react-firebase-hooks/firestore";
-
 import { useAuthState } from 'react-firebase-hooks/auth';
 import db,{auth} from "../firebase";
 export default function Sidebar() {
@@ -66,11 +65,16 @@ const SidebarContainer = styled.div`
   flex: 0.2;
   border-top: 1px solid #49274b;
   max-width: 260px;
+  max-height: 100vh;
+  overflow: scroll;
   margin-top: 60px;
   > hr {
     margin-top: 10px;
     margin-bottom: 10px;
     border: solid 1px #492748;
+  }
+  &::-webkit-scrollbar {
+    display: none;
   }
 `;
 const SidebarHeader = styled.div`
